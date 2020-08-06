@@ -8,6 +8,7 @@
 --
 CREATE TABLE caeschema.songs (
   title VARCHAR(255) ,
+  artist VARCHAR(255) ,
 CONSTRAINT title_PK PRIMARY KEY (title)
  
 );
