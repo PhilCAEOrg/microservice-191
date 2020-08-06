@@ -113,7 +113,7 @@ public class MusicService extends RESTService {
   public Response getSongs() {
 
 
-  Connection connection;
+   Connection connection;
 
 try {
     connection = dbm.getConnection();
@@ -125,6 +125,7 @@ try {
     while(result.next()) {
         JSONObject songJson = new JSONObject();
         songJson.put("title", result.getString("title"));
+        songJson.put("artist", result.getString("artist"));
         a.add(songJson);
     }
     statement.close();
